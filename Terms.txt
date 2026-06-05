@@ -1,0 +1,5 @@
+Image --> 2d grid or matrix of number
+pixel = a smallest unit of image, l*w, hold three color rgb
+width -> left to right no of pixels
+height -> top to bottom no of pixels
+color channel -> store one part of color information for each pixel
