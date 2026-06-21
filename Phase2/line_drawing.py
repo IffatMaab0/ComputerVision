@@ -49,8 +49,7 @@ else:
             cv2.imwrite('rectangle_Image.png', rec)
             print('Image saved successfully!')
         else:
-            print("Thank You!")   
-            
+            print("Thank You!")          
 
     if ask2 == '3':
         X1 = int(input('Enter X: '))
@@ -69,7 +68,6 @@ else:
             print('Image saved successfully!')
         else:
             print("Thank You!")
-
 
     if ask2 == '4':
         text = input('What you wanna write:')
