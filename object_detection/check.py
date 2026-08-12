@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 model = YOLO("yolo11n.pt")
 
-results = model("images/3things.webp")
+results = model("images/crowd.jpg")
 
 result = results[0]
 
@@ -19,4 +19,4 @@ for box in result.boxes:
     )
 
 
-result.save(filename="outputs/result3things.jpg")
+result.save(filename="outputs/result_street2.jpg")
