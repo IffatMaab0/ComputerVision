@@ -18,3 +18,4 @@ for box in result.boxes:
     class_name = model.names[class_id]
 
     print(class_name, confidence)
+    
