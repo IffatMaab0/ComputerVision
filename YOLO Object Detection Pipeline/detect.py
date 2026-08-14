@@ -2,24 +2,23 @@ from ultralytics import YOLO
 
 model = YOLO("yolo11n.pt")
 
-results = model("images/test.jpg")
+results = model("images/3things.webp" , conf=0.4, iou=0.7)
 
 result = results[0]
+result.show()
+for box in result.boxes:
 
-print("Image shape:")
-print(result.orig_shape)
+    x1, y1, x2, y2 = box.xyxy[0]
 
-print("\nBoxes:")
-print(result.boxes)
+    class_id = int(box.cls[0])
+    confidence = float(box.conf[0])
 
-print("\nCoordinates:")
-print(result.boxes.xyxy)
+    print("Class:", model.names[class_id])
+    print("Confidence:", confidence)
 
-print("\nConfidence:")
-print(result.boxes.conf)
+    print("x1:", float(x1))
+    print("y1:", float(y1))
+    print("x2:", float(x2))
+    print("y2:", float(y2))
 
-print("\nClass IDs:")
-print(result.boxes.cls)
-
-print("\nClass names:")
-print(model.names)
+    print("----------------")
