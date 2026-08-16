@@ -1,5 +1,7 @@
 import cv2
 vid = cv2.VideoCapture('video.mp4')
+
+
 while True:
     ret, frame = vid.read()
     if not ret:
@@ -9,5 +11,8 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('a'):
         print('quiting...')
         break
+
+
+
 vid.release()
 cv2.destroyAllWindows()    
