@@ -1,4 +1,5 @@
 import cv2
+import time
 vid = cv2.VideoCapture('video.mp4')
 
 
