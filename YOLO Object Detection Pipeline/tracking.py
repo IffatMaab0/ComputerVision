@@ -34,7 +34,6 @@ while True:
             result.boxes,
             track_ids
         ):
-
             class_id = int(box.cls[0])
             class_name = model.names[class_id]
 
@@ -73,7 +72,6 @@ while True:
                 2
             )
 
-    # Draw counting line
     cv2.line(
         result.orig_img,
         (COUNTING_LINE_X, 0),
